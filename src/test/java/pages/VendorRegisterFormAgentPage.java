@@ -60,6 +60,14 @@ public class VendorRegisterFormAgentPage {
     @FindBy(xpath = "//a[@class='btn btn-lg btn-primary']")
     public WebElement loginHereLink;
 
+    @FindBy(id = "alert_email_address")
+    public WebElement emailErrorText;
+
+//if you have more then 1 red box need to provide index for xpath
+    @FindBy(xpath = "//input[@style='border-color: red;']")
+    public WebElement becomeRedBox;
+
+
 
 
 

@@ -28,6 +28,10 @@ public class Driver {
     public static WebDriver getDriver(){
         if(driver == null){
             switch (ConfigurationReader.getProperty("browser")){
+                case "chrome":
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver();
+                    break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
@@ -44,9 +48,6 @@ public class Driver {
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
                     break;
-                default:
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
             }
 
         }
