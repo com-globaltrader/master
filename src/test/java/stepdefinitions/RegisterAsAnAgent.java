@@ -5,6 +5,8 @@ import io.cucumber.java.en.Then;
 import static org.junit.Assert.*;
 
 
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.ui.Select;
 import pages.VendorRegisterFormAgentPage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
@@ -125,12 +127,14 @@ public class RegisterAsAnAgent {
 
     @Given("user select country from dropdown")
     public void user_select_country_from_dropdown() {
+        Select select = new Select(agetRegistration.countryDropDown);
+        select.selectByIndex(23);
 
     }
 
     @Given("user provide state {string}")
     public void user_provide_state(String string) {
-
+        agetRegistration.stateTextBox.sendKeys(string);
     }
 
     @Given("if state box is blank verify box will be red")
@@ -140,7 +144,7 @@ public class RegisterAsAnAgent {
 
     @Given("user provide city {string}")
     public void user_provide_city(String string) {
-
+        agetRegistration.cityTextBox.sendKeys(string);
     }
 
     @Given("if city box is blank verify box will be red")
@@ -150,7 +154,7 @@ public class RegisterAsAnAgent {
 
     @Given("user provide address {string}")
     public void user_provide_address(String string) {
-
+        agetRegistration.addressTextBox.sendKeys(string);
     }
 
     @Given("if address box is blank verify box will be red")
@@ -160,12 +164,13 @@ public class RegisterAsAnAgent {
 
     @Given("user provide posta code {string}")
     public void user_provide_posta_code(String string) {
-
+        agetRegistration.postalCodeTextBox.sendKeys(string);
     }
 
     @Given("user select category from dropdown")
     public void user_select_category_from_dropdown() {
-
+        Select select = new Select(agetRegistration.categoriesDropDown);
+        select.selectByIndex(3);
     }
 
     @Given("if category box is blank verify box will be red")
@@ -175,7 +180,7 @@ public class RegisterAsAnAgent {
 
     @Given("user provide password {string}")
     public void user_provide_password(String string) {
-
+        agetRegistration.passwordTextBox.sendKeys(string);
     }
 
     @Given("if password box is blank verify box will be red")
@@ -185,7 +190,7 @@ public class RegisterAsAnAgent {
 
     @Given("user cliks registration button")
     public void user_cliks_registration_button() {
-
+        agetRegistration.registrationButton.click();
     }
 
     @Then("verify success message {string}")
