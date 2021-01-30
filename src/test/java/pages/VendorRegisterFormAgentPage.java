@@ -1,9 +1,12 @@
 package pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
+
+import java.util.List;
 
 public class VendorRegisterFormAgentPage {
 
@@ -67,14 +70,11 @@ public class VendorRegisterFormAgentPage {
     @FindBy(xpath = "//input[@style='border-color: red;']")
     public WebElement becomeRedBox;
 
+    @FindBy(xpath = "//input[@style='border-color: red;']")
+    public List<WebElement> listOfRedBox;
 
-
-
-
-
-
-
-
+    @FindBy(xpath = "//div[@id='alert_vender_address_info']")
+    public WebElement addressRedBox;
 
 
 }
