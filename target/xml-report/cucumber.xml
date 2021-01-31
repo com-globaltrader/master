@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="18.484">
+<testcase classname="Access" name="Company seller access to  to application with valid credentials" time="18.108">
+<failure message="should not be same expected not same" type="java.lang.AssertionError"><![CDATA[Given user is on GLBTreader home page.......................................passed
+Given user navigate to vendor registration page.............................passed
+Given user click on register page to Login here.............................passed
+Given user provide valid email "bayramhizal2071@gmail.com"..................passed
+Given user provide valid password "sdet.41".................................passed
+And user click on Login Button..............................................passed
+Then user access on application.............................................failed
+
+StackTrace:
+java.lang.AssertionError: should not be same expected not same
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failSame(Assert.java:820)
+	at org.junit.Assert.assertNotSame(Assert.java:799)
+	at stepdefinitions.US10_AccessApplication.user_access_on_application(US10_AccessApplication.java:45)
+	at ✽.user access on application(file:///Users/bayram/IdeaProjects/master/src/test/resources/features/US10_AccessApplication.feature:16)
+]]></failure>
+</testcase>
+</testsuite>
