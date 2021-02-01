@@ -1,21 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="18.484">
-<testcase classname="Access" name="Company seller access to  to application with valid credentials" time="18.108">
-<failure message="should not be same expected not same" type="java.lang.AssertionError"><![CDATA[Given user is on GLBTreader home page.......................................passed
-Given user navigate to vendor registration page.............................passed
-Given user click on register page to Login here.............................passed
-Given user provide valid email "bayramhizal2071@gmail.com"..................passed
-Given user provide valid password "sdet.41".................................passed
-And user click on Login Button..............................................passed
-Then user access on application.............................................failed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="26.102">
+<testcase classname="ForgetPassword" name="when seller forget the Password,seller can see  a new message about sending new password on their emails" time="12.778">
+<system-out><![CDATA[Given user is on GLBTreader home page.......................................passed
+Given User click on home page sellers‘s Sign in items.......................passed
+Then user click on email box................................................passed
+Then user  provide the valid email "bayramhizal2071@gmail.com"..............passed
+Then user  click on forget password button..................................passed
+Then user click on Email button.............................................passed
+Then user provide validate Email "bayramhizal2071@gmail.com"................passed
+Then user click on Forget Password button...................................passed
+And user should see a message as"Your new Password Send Successfully On Your Email".passed
+]]></system-out>
+</testcase>
+<testcase classname="ForgetPassword" name="when seller forget the Password,seller can see  a new message about sending new password on their valid emails" time="13.024">
+<failure message="" type="java.lang.AssertionError"><![CDATA[Given user is on GLBTreader home page.......................................passed
+Given User click on home page sellers‘s Sign in items.......................passed
+Then user click on email box................................................passed
+Then user  provide the valid email "bayramhizal2071@gmail.com"..............passed
+Then user  click on forget password button..................................passed
+Then user click on Email button.............................................passed
+Then user provide INvalidate Email "bayramhizal@gmail.com"..................passed
+Then user click on Forget Password button...................................passed
+And user should not see a message as"Your new Password Send Successfully On Your Email".failed
 
 StackTrace:
-java.lang.AssertionError: should not be same expected not same
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failSame(Assert.java:820)
-	at org.junit.Assert.assertNotSame(Assert.java:799)
-	at stepdefinitions.US10_AccessApplication.user_access_on_application(US10_AccessApplication.java:45)
-	at ✽.user access on application(file:///Users/bayram/IdeaProjects/master/src/test/resources/features/US10_AccessApplication.feature:16)
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepdefinitions.US11.user_should_not_see_a_message_as_Your_new_Password_Send_Successfully_On_Your_Email(US11.java:64)
+	at ✽.user should not see a message as"Your new Password Send Successfully On Your Email"(file:///Users/bayram/IdeaProjects/master/src/test/resources/features/US11_ForgetPassword.feature:24)
 ]]></failure>
 </testcase>
 </testsuite>
