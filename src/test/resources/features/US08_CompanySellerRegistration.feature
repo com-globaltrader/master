@@ -16,7 +16,6 @@
     Given user provide valid Company Mobile "+447399054258"
     Given if Company Mobile box is blank verify box will be red
 
-
   Scenario: user should provide company address to the box  and it can not be blank
     Given user provide Company name "Falcon"
     Given user provide valid Company Mobile "+44 7399054258"
